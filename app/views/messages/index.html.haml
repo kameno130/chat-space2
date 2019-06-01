@@ -6,7 +6,11 @@
         %p.side-header__box__user-name ログインユーザー
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group グループ作成
-          %li.side-header__box__menu__edit ユーザー編集画面
+          -#   =link_to "#", class: "Contents__btn Contents__btn--グループ作成" do
+          -#     = fa_icon '#', class: "Contents__btn--icon"
+          -# %li.side-header__box__menu__edit ユーザー編集画面
+          -#   =link_to "#", class: "Contents__btn Contents__btn--ユーザー編集画面" do
+          -#     = fa_icon '#', class: "Contents__btn--icon"
     .groups
       .group
         %p.group__group-name グループ名
@@ -24,19 +28,18 @@
         %p.massage__upper-info__talker 亀野啓佑
         %p.massage__upper-info__date 2019/05/31(Fri) 17:19:09
       .massage__text こんにちは
-    .massages
       .massage__upper-info
         %p.massage__upper-info__talker 亀野啓佑
         %p.massage__upper-info__date 2019/05/31(Fri) 17:19:46
       .massage__text さようなら！
     .form
-      %form
-        %input
-        %input
+      -# %form
+      -#   %input
+      -#   %input
         .input-box
-          %input
-          %label.input-box__image
-        %input.submit-btn
+        -#   %input
+        -#   %label.input-box__image
+        -# %input.submit-btn
 
 
 
