@@ -1,5 +1,5 @@
-@import "reset";
-@import "variable";
-@import "font-awesome";
-@import "message";
-@import "style"
+@import "./config/colors";
+@import "./config/font-size";
+@import "./config/reset";
+@import "./modules/chat";
+@import "font-awesome"
