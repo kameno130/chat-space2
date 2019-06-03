@@ -6,7 +6,7 @@
           = current_user.name
         %ul.header-box__user__menu
           .menu-icon
-          = link_to "#", class: 'new-group'do
+          = link_to "/groups/new", class: 'new-group'do
             =fa_icon 'pencil-square-o', class: 'icon'
           .menu-icon
           = link_to "/users/#{current_user.id}/edit", class: 'edit-user'do
