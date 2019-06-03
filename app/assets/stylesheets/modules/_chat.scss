@@ -25,12 +25,16 @@
           .header-box__user__menu{
             .menu-icon {
               display: inline-block;
+              
             }
-              .icon {
-              color: $white;
-              font-size: $side_header_font;
+              .new-group{
+                text-decoration: none;
               }
-        }
+                .icon {
+                color: $white;
+                font-size: $side_header_font;
+                }
+          }
       }
     }
 
@@ -56,6 +60,7 @@
   .chat-main {
     width: calc(100% - 300px);
     float: left;
+    position: relative;
 
     .main-header{
       height: 99px;
@@ -90,11 +95,10 @@
       }
     }
     .messages {
-      height: calc(100vh - 282px);
+      height: calc(100vh - 262px);
       padding: 46px 40px ;
       background-color: #fafafa;
       overflow: scroll;
-      // position: relative;
       .message{
         padding-bottom: 40px;
         .message__upper-info {
@@ -125,8 +129,8 @@
       box-sizing: border-box;
       height: 90px;
       padding: 20px 40px;
-    // position: absolute;
-    // bottom: 0;
+      position: absolute;
+      bottom: 0;
       width: 100%;
       &__message {
         border: none;
