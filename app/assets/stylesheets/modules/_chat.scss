@@ -18,20 +18,18 @@
           width: 100%;
           font-weight: bold;
           .header-box__user-name {
-            display: inline-block;
             font-size: $side_header_font;
             font-weight: bold;
             vertical-align:middle;
           }
           .header-box__user__menu{
-            display: inline-block;
             .menu-icon {
               display: inline-block;
+            }
               .icon {
-                color: $white;
-                font-size: $side_header_font;
+              color: $white;
+              font-size: $side_header_font;
               }
-          }
         }
       }
     }
@@ -39,16 +37,18 @@
   .groups {
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
-    padding: 0 20px;
+    padding: 20px 20px 0;
+    overflow: scroll;
     .group {
       box-sizing: border-box;
-      padding: 20px 0 40px;
-      &__group-name {
+      margin-bottom: 40px;
+      &__name {
         font-size: $side_group_name;
+        margin-bottom: 5px;
       }
-      &__group-message {
+      &__message  {
         font-size: $side_group_message;
-        margin-top: 5px;
+        
       }
     }
   }
@@ -89,17 +89,17 @@
         float: right;
       }
     }
-    .massages {
+    .messages {
       height: calc(100vh - 282px);
       padding: 46px 40px ;
       background-color: #fafafa;
       overflow: scroll;
       // position: relative;
-      .massage{
+      .message{
         padding-bottom: 40px;
-      .massage__upper-info {
-        display: flex;
-        margin-bottom: 10px;
+        .message__upper-info {
+          display: flex;
+          margin-bottom: 10px;
           &__talker {
             color: #434a54;
             font-size: 16px;
@@ -108,17 +108,16 @@
           &__date {
             color: #999;
             font-size: 12px;
-            padding-left: 10px;
-          
-        }
-      .massage__text {
-        margin-top: 10px;
-        color: #434a54;
-        font-size: 14px;
-        margin-bottom: 10px
+            margin-left: 10px;
+            
           }
-          
         }
+        .message__text {
+          margin-top: 10px;
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 10px
+          }
       }
     }
     .form {

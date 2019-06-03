@@ -13,9 +13,9 @@
             =fa_icon 'cog', class: 'icon'
     .groups
       .group
-        %p.groups__group-name 
+        %p.group__name 
           グループ名
-        %p.groups__group-message 
+        %p.group__message 
           グループメッセージ
 
   .chat-main
@@ -27,23 +27,23 @@
           member:
           %li.menber 
             グループメンバー
-      .main-header__edit-btn exit
-    .massages
-      .massage
-        .massage__upper-info
-        
-          .massage__upper-info__talker
+      .main-header__edit-btn edit
+    .messages
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker
             亀野啓佑
-          .massage__upper-info__date
+          %p.message__upper-info__date
             2019/05/31(Fri) 17:19:09
-        .massage__text
+        %p.message__text
           こんにちは
-        .massage__upper-info
-          .massage__upper-info__talker
+      .message
+        .message__upper-info
+          %p.massage__upper-info__talker
             亀野啓佑
-          .massage__upper-info__date
+          .message__upper-info__date
             2019/05/31(Fri) 17:19:46
-        .massage__text
+        .message__text
           さようなら！
     .form
       %form
