@@ -13,22 +13,7 @@
             グループメンバー
       .main-header__edit-btn edit
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__talker
-            亀野啓佑
-          %p.message__upper-info__date
-            2019/05/31(Fri) 17:19:09
-        %p.message__text
-          こんにちは
-      .message
-        .message__upper-info
-          %p.massage__upper-info__talker
-            亀野啓佑
-          .message__upper-info__date
-            2019/05/31(Fri) 17:19:46
-        .message__text
-          さようなら！
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
