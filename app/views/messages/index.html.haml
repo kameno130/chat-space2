@@ -1,23 +1,7 @@
 .wrapper
-  .chat-side
-    .header
-      .header-box
-        %h2.header-box__user-name 
-          = current_user.name
-        %ul.header-box__user__menu
-          .menu-icon
-          = link_to "#", class: 'new-group'do
-            =fa_icon 'pencil-square-o', class: 'icon'
-          .menu-icon
-          = link_to "/users/#{current_user.id}/edit", class: 'edit-user'do
-            =fa_icon 'cog', class: 'icon'
-    .groups
-      .group
-        %p.group__name 
-          グループ名
-        %p.group__message 
-          グループメッセージ
 
+  = render 'shared/side_bar'
+  
   .chat-main
     .main-header
       .main-header__left-box
