@@ -7,25 +7,25 @@ $(document).on('turbolinks:load', function(){
                     <p message__upper-info__talker">
                       ${message.user_name}
                     </p>
-                    <p class="message__text">
+                    <p class="message__upper-info__date">
                       ${message.date}
                     </p>
                   </div>
-                  <p class="lower-message__content">
+                  <p class="message__text">
                     <div>
                     ${content}
                     </div>
                     ${img}
                   </p>
                 </div>`
+
+                
   return html;
   }
-  $('.form__message').on('submit', function(e){
+  $('#new_message').on('submit', function(e){
     e.preventDefault();
     var message = new FormData(this);
     var url = (window.location.href);
-    // POSTリクエスト
-    console.log(url)
     $.ajax({
       url: url,
       type: "POST",
@@ -37,15 +37,15 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('.submit').prop('disabled', false);
       $('.form__message').val('');
-
+      $('.hidden').val('');
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
     .fail(function(data){
       alert('error');
     })
     .always(function(data){
-      $('.submit').prop('disabled', false);
+      $('.form__submit').prop('disabled', false);
   })
 }) 
 })
