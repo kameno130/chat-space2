@@ -15,15 +15,18 @@ $(document).on('turbolinks:load', function(){
     search_list.append(html);
   }
  
-  // var group_list = $("#chat-group-users");
+  var group_list = $("#chat-group-users");
 
-  // function appendmenber(user){
-  //   var html = `<div class="chat-group-user clearfix ">
-  //               <p class="chat-group-user__name">${user.name}</p>
-  //               <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id=${user.id} data-user-name=${user.name}>削除</a>
-  //             </div>`;
-  //     group_list.append(html);
-  // }
+  function appendMenber(id, name){
+    var html = `<div id='chat-group-users'>
+               <div class='chat-group-user clearfix js-chat-member' id='${id}'>
+               <input name='group[user_ids][]' type='hidden' value='${id}'>
+                <p class='chat-group-user__name'>${name}</p>
+                <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+          </div>`;
+      group_list.append(html);
+  }
+
 
 $("#user-search-field").on("keyup", function() {
   var input = $("#user-search-field").val();
@@ -48,11 +51,19 @@ $("#user-search-field").on("keyup", function() {
     alert('error');
   });
 });
+
+
+$(document).on("click",".user-search-add", function() {
+  $('#chat-group-users').val();
+  var id = $(this).data('user-id');
+  var name= $(this).data('user-name');
+  appendMenber(id, name);
+  $(this).parent().remove();
+
+
 });
+$(document).on("click", ".user-search-remove", function (){
+  $(this).parent().remove();
+})
 
-// $(document).on("click","#user-search-result" function() {
-  
-  
-  
-
-// });
+});
