@@ -59,4 +59,9 @@ gem 'erb2haml'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'pry-rails'
+
+
+group :development, :test do
+
+  gem 'pry-rails'
+end
