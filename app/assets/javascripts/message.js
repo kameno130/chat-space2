@@ -49,8 +49,7 @@ $(document).on('turbolinks:load', function(){
   })
   
 
-  // $(function() {
-  //   if (window.location.href.match(/\/groups\/\d+\/messages/)){
+  
     var reloadMessages = function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
       last_message_id =$('.message:last').data("id");
@@ -78,6 +77,6 @@ $(document).on('turbolinks:load', function(){
 
     
   }
-  setInterval(reloadMessages, 20000);
-  // });
+  setInterval(reloadMessages, 10000);
+
 });
