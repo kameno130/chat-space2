@@ -6,12 +6,15 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group 
-          グループ名
+          = @group.name
         %ul.main-header__left-box__menber-list
           member:
           %li.menber 
-            グループメンバー
-      .main-header__edit-btn edit
+            - @group.users.each do |user|
+              = user.name
+      .main-header__edit-btn
+        = link_to edit_group_path(@group.id), class: 'edit__form' do
+          edit
     .messages
       = render @messages
       
